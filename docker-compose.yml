@@ -1,0 +1,17 @@
+services:
+  app:
+    build: ./app
+    container_name: studiorag_app
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./docs:/app/docs
+      - chroma_data:/app/chroma_db
+    environment:
+      - CHROMA_PATH=/app/chroma_db
+      - DOCS_PATH=/app/docs
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    restart: unless-stopped
+
+volumes:
+  chroma_data:

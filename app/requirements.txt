@@ -1,0 +1,10 @@
+langchain==0.3.25
+langchain-community==0.3.24
+langchain-chroma==0.1.4
+langchain-anthropic==0.3.19
+chromadb==0.5.3
+sentence-transformers==3.0.1
+pypdf==4.3.1
+streamlit==1.37.1
+torch==2.4.0+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu
